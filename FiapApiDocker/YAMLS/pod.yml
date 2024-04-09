@@ -1,0 +1,12 @@
+﻿apiVersion: v1
+kind: Pod
+metadata:
+    name: fiapapipod
+    labels:
+      app: fiapapipod
+spec:
+  containers:
+  - name: fiapapipod
+    image: kaiqueleoanardo12/fiapapidocker
+    ports:
+    - containerPort: 80
