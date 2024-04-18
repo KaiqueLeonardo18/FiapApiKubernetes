@@ -35,14 +35,10 @@ jobs:
               echo "Executando dir"
               dir
 
-          - name: Set up kubectl
-            uses: azure/k8s-set-context@v1
-            with:
-              method: kubeconfig
-              kubeconfig: ${{ secrets.KUBE_CONFIG_NEW }}
-              version: 1.21.0
-
-          
           - name: Deploy to AKS
             run:
-              kubectl apply -f deployment.yaml
+              kubectl apply -f FiapApiKubernetes/YAMLS/deployment.yaml
+
+          - name: Waiting deploy to AKS
+            run:
+              kubectl wait --for=condition=available deployment/fiapapipod
