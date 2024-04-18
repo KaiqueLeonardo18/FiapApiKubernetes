@@ -30,7 +30,7 @@ jobs:
               version: 1.21.0
 
           - name: Login to Docker hub
-            run: docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_PASSWORD }} 
+            run: docker login -u ${{ secrets.DOCKERHUB_USERNAME_NEW }} -p ${{ secrets.DOCKERHUB_PASSWORD_NEW }} 
 
           - name: Build and Push Docker Image
             run:
