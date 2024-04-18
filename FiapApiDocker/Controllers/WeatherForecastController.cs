@@ -1,3 +1,4 @@
+using FiapDocker;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FiapApiDocker.Controllers
