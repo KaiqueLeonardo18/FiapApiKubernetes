@@ -37,7 +37,7 @@ jobs:
 
           - name: Deploy to AKS
             run:
-              kubectl apply -f FiapApiKubernetes/YAMLS/deployment.yaml
+              kubectl apply -f FiapApiDocker/YAMLS/deployment.yaml
 
           - name: Waiting deploy to AKS
             run:
