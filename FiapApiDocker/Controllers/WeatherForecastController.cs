@@ -7,7 +7,7 @@ namespace FiapApiDocker.Controllers
     [Route("[controller]")]
     public class PrevisaoTempoController : ControllerBase
     {
-        private static readonly string[] CidadesBrasileiras = { "São Paulo", "Rio de Janeiro", "Brasília", "Salvador", "Belo Horizonte" };
+        private static readonly string[] CidadesBrasileiras = { "Teste", "teste", "saasff", "fasfsaf", "fsafsa" };
 
         [HttpGet("condicoes-atuais")]
         public IEnumerable<PrevisaoTempo> ObterPrevisoesTempo()
