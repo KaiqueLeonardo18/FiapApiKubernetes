@@ -24,13 +24,16 @@ jobs:
           - name: Build and Push Docker Image
             run:
               docker build -t kaiqueleoanardo12/fiapapidocker:latest .
-              docker push kaiqueleoanardo12/fiapapidocker:latest
 
 
           - name: Publish image
             run:
               docker push kaiqueleoanardo12/fiapapidocker:latest
 
+          - name: Listar arquivos no diretorio
+            run:
+              echo "Executando dir"
+              dir
 
           - name: Set up kubectl
             uses: azure/k8s-set-context@v1
