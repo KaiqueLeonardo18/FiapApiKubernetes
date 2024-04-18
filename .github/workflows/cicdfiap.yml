@@ -38,7 +38,3 @@ jobs:
           - name: Deploy to AKS
             run:
               kubectl apply -f FiapApiDocker/YAMLS/deployment.yml
-
-          - name: Waiting deploy to AKS
-            run:
-              kubectl wait --for=condition=available deployment/fiapapipod
