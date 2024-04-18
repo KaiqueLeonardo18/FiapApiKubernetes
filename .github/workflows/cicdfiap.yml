@@ -16,10 +16,21 @@ jobs:
           - name: Chekout Repository
             uses: actions/checkout@v2
 
+          - name: Restaurar pacotes
+            run: dotnet restore
+
+          - name: publicar app
+            run: dotnet publish -c Release -o ./publish
+
+          - name: Set up kubectl
+            uses: azure/k8s-set-context@v1
+            with:
+              method: kubeconfig
+              kubeconfig: ${{ secrets.KUBE_CONFIG_NEW }}
+              version: 1.21.0
+
           - name: Login to Docker hub
             run: echo ${{ secrets.DOCKERHUB_PASSWORD_NEW }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME_NEW }} --password-stdin
-
-
 
           - name: Build and Push Docker Image
             run:
