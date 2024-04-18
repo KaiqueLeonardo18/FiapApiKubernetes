@@ -47,4 +47,4 @@ jobs:
               dir
 
           - name: Deploy to AKS
-            run: kubectl apply -f FiapApiDocker/YAMLS/deployment.yaml
+            run: kubectl apply -f FiapApiDocker/YAMLS/deployment.yml
