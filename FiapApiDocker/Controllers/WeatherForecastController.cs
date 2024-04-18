@@ -8,7 +8,7 @@ namespace FiapApiDocker.Controllers
     {
         private static readonly string[] Summaries = new[]
         {
-            "Freezingaaasaaaaaa", "Bracaaaaaaaaaaaaaaaing", "Chilaaaaaaaaaaaaaaly", "Coolaaaaaaaaaaa", "Mildaaaaaaaaa", "Warmaaaaaaa", "Balmy", "Hot", "Sweltering", "Scorching"
+            "asfasfsafsaf", "asfsafsafsafas", "fasfsafsafsaf", "afasfasfsafsa", "Mildaaaaaaaaa", "asfasfsafasf", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
         private readonly ILogger<WeatherForecastController> _logger;
